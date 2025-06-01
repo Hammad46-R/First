@@ -1,0 +1,113 @@
+    body {
+    font-family: 'Poppins', sans-serif;
+    }
+/* turist-police-logo   /   home-headings  */
+.home-heading-links{
+list-style: none;
+gap: 40px;
+display: flex;
+align-items: center;
+}
+.home-heading-links li{
+    padding-left: 20px;
+    position: relative;
+}
+.home-heading-links a{
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #333; 
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.home-heading-links li a:hover,
+.home-heading-links .active{
+background-color: #5b9fd8;
+}
+
+
+
+
+
+/* service section */
+
+.service-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.service-heading:hover::after{
+    width: 100%;
+}
+.service-heading::after{
+contain: "";
+position: absolute;
+width: 0%;
+height: 4px;
+background-color:#5b9fd8 ;
+left: 0;
+bottom: -10px;
+transition: width 0.3s ease-in-out;
+}
+.service-card{
+    flex: 1 1 calc(25% - 20px);
+    max-width: 280px;
+    height: 385px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.service-card:hover{
+    border-color: #5b9fd8;
+    transform: scale(1.02);
+}
+
+
+/* footer */
+
+.footer-link-section{
+    flex: 1;
+    min-width: 150px;
+}
+.footer-link-section h1{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.footer-link-section ul{
+    list-style: none;
+    padding: 0;
+}
+.footer-link-section ul li{
+margin-bottom: 10px;
+cursor: pointer;
+}
+.footer-link-section ul li:hover{
+    text-decoration: underline;
+}
+@media (max-width: 768px){
+    #nav-bar{
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-heading-links{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-all-content{
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+    }
+    .services-card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card{
+    width: 90%;
+    }
+}
